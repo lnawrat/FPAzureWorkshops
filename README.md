@@ -10,12 +10,12 @@ VM credentials: `training` : `{you_know}`
 ### Exercise 1 - Deploy SQL database
 
 1. Clone git repository:
-``` git 
+```powershell 
 git clone https://github.com/lnawrat/FPAzureWorkshops.git
 ```
 
 2. Check out the `01-db` branch:
-``` git 
+```powershell
 git checkout 01-db
 ```
 
@@ -41,9 +41,29 @@ git checkout 01-db
 1. Add a new deployment slot to the Azure Web App.
 2. Test the new slot web application by accessing azure url.
 3. Check out the `03-swapweb` branch:
-``` git 
+```powershell 
 git checkout 03-swapweb
 ```
 
 4. Extend the `Scripts\Swap-WebAppSlot.ps1` poweshell script to make it swap the slots.
 5. Use the [Azure Resource Explorer](https://resources.azure.com) portal for command details.
+
+### Exercise 4 - Uploading file to Azure Storage Account
+
+1. Test the uploading image form in the application. It is not working just yet.
+2. Add a new Storage Account in the Azure portal.
+3. Add the new Storage Account connection string to the application's web.config.
+4. Install the `WindowsAzure.Storage` nuget package.
+5. Implement missing code in `FilesStorageService` class – use the commented out code.
+6. If needed use the msdn instructions: https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-quickstart-blobs-dotnet .
+7. Test the uploading image form in the application again.
+8. Check out image urls.
+9. Check out uploaded files in the Azure portal.
+
+### Exercise 5 - Connecting to the Azure Virtual Machine
+
+1. Add a new Azure Virtual Machine in the Azur portal. Use the Ubuntu version.
+2. Connect to the new Virtual Machine's public IP through ssh:
+```ssh
+ssh myadmin@0.0.0.0
+```
