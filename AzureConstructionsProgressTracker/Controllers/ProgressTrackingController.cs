@@ -8,12 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using Common;
 
+using static System.Configuration.ConfigurationManager;
+
 namespace AzureConstructionsProgressTracker.Controllers
 {
     public class ProgressTrackingController : Controller
     {
         private readonly ConstructionsProgressTrackerContext _db = new ConstructionsProgressTrackerContext();
-        private readonly FilesStorageService _filesStorageService = new FilesStorageService();
+        private readonly FilesStorageService _filesStorageService;
+
+        public ProgressTrackingController()
+        {
+            _filesStorageService = new FilesStorageService(ConnectionStrings["AzureStorage"].ConnectionString);
+        }
 
         // GET: ProgressTracking
         public async Task<ActionResult> Index()
@@ -72,7 +79,7 @@ namespace AzureConstructionsProgressTracker.Controllers
             ViewBag.ConstructionProjectId = new SelectList(_db.ConstructionProjects, "Id", "Name", progressTrackingEntry.ConstructionProjectId);
             return View(progressTrackingEntry);
         }
-        
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
