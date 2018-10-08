@@ -7,7 +7,7 @@ VM credentials: `training` : `{you_know}`
 
 ## Exercises
 
-### Exercise 1 - Deploy SQL database
+### Exercise 1 - Deploying SQL database
 
 1. Clone git repository:
 ```powershell 
@@ -26,7 +26,7 @@ git checkout 01-db
 7. Replace the connection string in the application's web.config.
 8. Test the site and see the new records in the Azure database.
 
-### Exercise 2 - Deploy Web application
+### Exercise 2 - Deploying Web application
 
 1. Restore previous database connection string in the web.config file - to point the local database.
 2. Add a new Web App in the Azure portal.
@@ -36,7 +36,7 @@ git checkout 01-db
 6. Test the deployed Azure App again.
 7. See the new records in the Azure database.
 
-### Exercise 3 - Swap deployment slots
+### Exercise 3 - Swaping deployment slots
 
 1. Add a new deployment slot to the Azure Web App.
 2. Test the new slot web application by accessing azure url.
