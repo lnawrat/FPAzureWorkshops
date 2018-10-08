@@ -22,7 +22,7 @@ git checkout 01-db
 3. Run application locally - test the site.
 4. Look into the local database through SQL Management Studio - see the new records.
 5. Add a new SQL database in the Azure portal.
-6. Connect to the new Azure database through SQL Management Studio - see the new records.
+6. Connect to the new Azure database through SQL Management Studio - see the tables.
 7. Replace the connection string in the application's web.config.
 8. Test the site and see the new records in the Azure database.
 
@@ -54,11 +54,11 @@ git checkout 03-swapweb
 2. Add a new Storage Account in the Azure portal.
 3. Add the new Storage Account connection string to the application's web.config.
 4. Install the `WindowsAzure.Storage` nuget package.
-5. Implement missing code in `FilesStorageService` class – use the commented out code.
+5. Implement missing code in the `FilesStorageService` class – use the commented out code.
 6. If needed use the msdn instructions: https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-quickstart-blobs-dotnet .
 7. Test the uploading image form in the application again.
-8. Check out image urls.
-9. Check out uploaded files in the Azure portal.
+8. Check out the image urls.
+9. Check out the uploaded files in the Azure portal.
 
 ### Exercise 5 - Connecting to the Azure Virtual Machine
 
