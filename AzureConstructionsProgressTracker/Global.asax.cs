@@ -1,6 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Common;
+
+using static System.Configuration.ConfigurationManager;
 
 namespace AzureConstructionsProgressTracker
 {
@@ -12,6 +15,9 @@ namespace AzureConstructionsProgressTracker
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            new ProjectAddedQueueService(ConnectionStrings["AzureServiceBus"].ConnectionString)
+                .Register();
         }
     }
 }
