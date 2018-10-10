@@ -62,7 +62,7 @@ git checkout 03-swapweb
 
 ### Exercise 5 - Connecting to the Azure Virtual Machine
 
-1. Add a new Azure Virtual Machine in the Azur portal. Use the Ubuntu version.
+1. Add a new Azure Virtual Machine in the Azur portal. Use the Ubuntu Server OS.
 2. Connect to the new Virtual Machine's public IP through ssh:
 ```ssh
 ssh myadmin@0.0.0.0
