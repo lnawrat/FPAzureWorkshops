@@ -36,7 +36,7 @@ git checkout 01-db
 6. Test the deployed Azure App again.
 7. See the new records in the Azure database.
 
-### Exercise 3 - Swaping deployment slots
+### Exercise 3 - Swapping deployment slots
 
 1. Add a new deployment slot to the Azure Web App.
 2. Test the new slot web application by accessing azure url.
