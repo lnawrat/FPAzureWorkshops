@@ -13,12 +13,10 @@ VM credentials: `training` : `{you_know}`
 ```powershell 
 git clone https://github.com/lnawrat/FPAzureWorkshops.git
 ```
-
 2. Check out the `01-db` branch:
 ```powershell
 git checkout 01-db
 ```
-
 3. Run application locally - test the site.
 4. Look into the local database through SQL Management Studio - see the new records.
 5. Add a new SQL database in the Azure portal.
@@ -44,7 +42,6 @@ git checkout 01-db
 ```powershell 
 git checkout 03-swapweb
 ```
-
 4. Extend the `Scripts\Swap-WebAppSlot.ps1` poweshell script to make it swap the slots.
 5. Use the [Azure Resource Explorer](https://resources.azure.com) portal for command details.
 
@@ -61,6 +58,24 @@ git checkout 03-swapweb
 9. Check out the uploaded files in the Azure portal.
 
 ### Exercise 5 - Connecting to the Azure Virtual Machine
+
+1. Add a new Azure Service Bus resource.
+2. Inside Azure Service Bus, add a new Queue.
+3. Save for later the queue name and the RootManageSharedAccessKey connection string.
+4. Add a new Function App.
+5. Add a new in-portal Function with Http trigger.
+6. Test the new function by using http address in a browser.
+7. In “Integrate” tab of the new Function add output “Azure Service Bus”.
+8. Install (wait for installation) suggested extension.
+9. Select parameters.
+10. Extend the Function code save message – out string param, remove async. See Logs/Console for error details.
+```C#
+public static IActionResult Run(HttpRequest req, ILogger log, out string outMsg)
+```
+11. See in portal that new messages have been sent.
+
+
+### Exercise 6 - Connecting to the Azure Virtual Machine
 
 1. Add a new Azure Virtual Machine in the Azur portal. Use the Ubuntu Server OS.
 2. Connect to the new Virtual Machine's public IP through ssh:
