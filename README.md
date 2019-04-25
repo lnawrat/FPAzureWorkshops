@@ -58,7 +58,7 @@ to get blob new url.
 8. Check out the image urls.
 9. Check out the uploaded files in the Azure portal.
 
-### Exercise 5 - Connecting to the Azure Virtual Machine
+### Exercise 5 - Sending Service Bus message from Azure Function
 
 1. Add a new Azure Service Bus resource.
 2. Inside Azure Service Bus, add a new Queue.
