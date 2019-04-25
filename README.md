@@ -53,7 +53,7 @@ git checkout 03-swapweb
 4. Install the `WindowsAzure.Storage` nuget package.
 5. Implement missing code in the `FilesStorageService` class – use the commented out code. Use `blockBlob.Uri.AbsoluteUri`
 to get blob new url.
-6. If needed use the msdn instructions: https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-quickstart-blobs-dotnet .
+6. If needed use the msdn instructions: https://docs.microsoft.com/en-us/azure/visual-studio/vs-storage-aspnet-getting-started-blobs#upload-a-blob-into-a-blob-container .
 7. Test the uploading image form in the application again.
 8. Check out the image urls.
 9. Check out the uploaded files in the Azure portal.
